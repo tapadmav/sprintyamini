@@ -86,17 +86,19 @@ int main()
                                     sleep(1);
                                     break;
                                 case 0:
-                                  //  printf("\n\tReturning back to Main Menu\n");
-                                   // break;
-                                exit(EXIT_SUCCESS);
+                                      printf("\n\tReturning back to Main Menu\n");
+                                      break;
+                               // exit(EXIT_SUCCESS);
                         
                                 default:
                                     printf("Incorrect Choice:");
                             }
+			    ch = 0;
+			    break;
 
                         }
-                        printf("\n\n");
-                        return 0;
+                        //printf("\n\n");
+                        //return 0;
                     }
                     
                     sleep(2);
@@ -143,10 +145,12 @@ int main()
                                 default:
                                     printf("\nEnter correct choice\n");
                             }
+			    ch =0;
+			    break;
 
                         }
-                        printf("\n\n");
-	                    return 0;
+                        //printf("\n\n");
+	                   // return 0;
                     }
                     sleep(2);
                     break;
