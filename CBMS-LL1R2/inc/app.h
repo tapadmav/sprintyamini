@@ -87,4 +87,5 @@ int bill();
 void cab_Details();
 //ST* scheduleTrip(ST *, int *);
 int isValidDate(struct tm dt);
+int update();
 #endif

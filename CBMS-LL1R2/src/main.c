@@ -130,6 +130,9 @@ int main()
                                     break;
                                 case 2:
                                     printf("\n\t Manage car details");
+				    update();
+				    sleep(1);
+				    break;
                                 
                                 case 3:
                                     checkBookedTrips(headccd);
@@ -156,12 +159,15 @@ int main()
                     break;
 
             case 0:
+		    printf("\n\t           *************************  THANK YOU  ************************   \n");
                     exit(EXIT_SUCCESS);
                     
             default:
                     printf("Incorrect Choice:");
         }
+   
     }
+
     
 	printf("\n\n");
 	return 0;

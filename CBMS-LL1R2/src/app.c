@@ -639,7 +639,7 @@ int tokenizeccd(Customer_Car_Details *ccd, char *tmpBuff)
 int cap(Customer_Car_Details *ccd)
 {
 	
-	int cost=0;
+	int cost=653;
 	int price=0;
 	FILE *fp = NULL;
 	fp = fopen("./data/Customer_Car_Details.dat","w+"); 
@@ -650,9 +650,9 @@ int cap(Customer_Car_Details *ccd)
 		printf("\n\tCapacity: ");
 		printf("%d",ccd->capacity);
 		
-		printf("\n\tEnter cost: ");
+		//printf("\n\tEnter cost: ");
 		//getchar();
-		scanf("%d",&cost);
+		//scanf("%d",&cost);
 		price = (ccd->capacity) * cost;
 		printf("\n\tcost is %d\n\t",price);
 		}
@@ -733,8 +733,9 @@ int markCompleteTrips(Customer_Car_Details *ccd)
 		   		   //cap(ccd);
                    printf("\n\tEnter the amount of your customer:");
                    scanf("%d",&amt);
-				   printf("\n\tEnter 1 for payment:");
-				   scanf("%d",&a);
+		   printf("\nYour Amount is %d ",amt);
+		   printf("\n\tEnter 1 for completed the trip : ");
+		   scanf("%d",&a);
 				   if(a==1)
 				   {
                   		 printf("\n\tThe Trip is Completed\n");
@@ -807,7 +808,23 @@ void cab_Details()
          fclose(ptr);
 
 }
+int update()
+{
+	FILE *ft;
+	char name[20];
+	ft = fopen("./data/cab.txt", "r+");
+	if(ft==NULL)
+	{
+		printf("can not open target file\n");
+		exit(1);
+	}
+	printf("\n\t Enter name:");
+	scanf("%s",name);
+	fprintf(ft,"%s",name);
+	fclose(ft);
+	return 0;
 
+}
 /*
 int isValidDate(struct tm dt)
  {
